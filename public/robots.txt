@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://unfold-2026.vercel.app/sitemap.xml
+Host: unfold-2026.vercel.app
