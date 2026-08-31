@@ -7,7 +7,7 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { LoadingScreen } from './components/LoadingScreen';
 import { AboutSection, MentorAndRegister, TracksAndSchedule, VenueSponsorsFaq } from './components/Sections';
-import { REGISTER_URL } from './data/site';
+import { APPLICATION_URL } from './data/site';
 import './style.css';
 
 function App() {
@@ -28,7 +28,7 @@ function App() {
     return () => observer.disconnect();
   }, []);
 
-  return <>{loading && <LoadingScreen done={() => setLoading(false)} />}<Header /><main><Hero /><AboutSection /><TracksAndSchedule /><MentorAndRegister /><VenueSponsorsFaq /></main><Footer />{showMobileCta && <a href={REGISTER_URL} target="_blank" rel="noreferrer" className="fixed bottom-4 left-4 right-4 z-40 inline-flex items-center justify-center gap-2 rounded-full bg-text-primary px-5 py-4 text-center text-sm font-semibold text-bg shadow-xl sm:hidden">Register Now <ArrowUpRight size={17} aria-hidden="true" /></a>}</>;
+  return <>{loading && <LoadingScreen done={() => setLoading(false)} />}<Header /><main><Hero /><AboutSection /><TracksAndSchedule /><MentorAndRegister /><VenueSponsorsFaq /></main><Footer />{showMobileCta && <a href={APPLICATION_URL} target="_blank" rel="noreferrer" className="fixed bottom-4 left-4 right-4 z-40 inline-flex items-center justify-center gap-2 rounded-full bg-text-primary px-5 py-4 text-center text-sm font-semibold text-bg shadow-xl sm:hidden">Register Now <ArrowUpRight size={17} aria-hidden="true" /></a>}</>;
 }
 
 createRoot(document.getElementById('root')!).render(<App />);
