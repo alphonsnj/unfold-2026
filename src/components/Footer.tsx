@@ -1,11 +1,9 @@
-import { ArrowUpRight } from 'lucide-react';
-import { EMAIL_ADDRESS, REGISTER_URL, SPONSOR_URL } from '../data/site';
-import { VideoBackground } from './VideoBackground';
+import { EMAIL_ADDRESS } from '../data/site';
 
 export function Footer() {
   return (
     <footer className="relative overflow-hidden px-6 pb-20 pt-20 md:pt-28">
-      <VideoBackground flip />
+      <img src="/event/auditorium-group.webp" alt="" aria-hidden="true" loading="lazy" decoding="async" width="1500" height="1000" className="absolute inset-0 h-full w-full object-cover" />
       <div className="absolute inset-0 bg-black/70" />
       <div className="relative z-10 mx-auto max-w-[1100px]">
         <p className="mb-6 font-display text-6xl italic md:text-8xl">UNFOLD</p>
@@ -16,15 +14,15 @@ export function Footer() {
           </div>
           <div>
             <p className="mb-2 text-xs uppercase tracking-[.2em] text-muted">Organised by</p>
-            <p className="text-sm text-muted">IEEE IA/IE/PELS Jt Ch Kerala · CCE IEEE SB</p>
+            <p className="text-sm text-muted">IEEE IA/IE/PELS Jt Ch Kerala · IEEE RAS Kerala Chapter · CCE IEEE SB</p>
           </div>
           <div>
-            <p className="mb-2 text-xs uppercase tracking-[.2em] text-muted">Delegates</p>
-            <a className="inline-flex items-center gap-2 text-sm hover:text-[#89AACC]" href={REGISTER_URL} target="_blank" rel="noreferrer">Register for UNFOLD <ArrowUpRight size={14} aria-hidden="true" /></a>
+            <p className="mb-2 text-xs uppercase tracking-[.2em] text-muted">Event recap</p>
+            <a className="text-sm hover:text-[#89AACC]" href="#gallery">View event gallery</a>
           </div>
           <div>
-            <p className="mb-2 text-xs uppercase tracking-[.2em] text-muted">Corporate Sponsors</p>
-            <a className="inline-flex items-center gap-2 text-sm hover:text-[#89AACC]" href={SPONSOR_URL} target="_blank" rel="noreferrer">View partnership deck <ArrowUpRight size={14} aria-hidden="true" /></a>
+            <p className="mb-2 text-xs uppercase tracking-[.2em] text-muted">With thanks</p>
+            <a className="text-sm hover:text-[#89AACC]" href="#partners">Sponsors and partners</a>
           </div>
         </div>
         <div className="mt-16 flex flex-col justify-between gap-4 border-t border-white/10 pt-6 text-xs text-muted sm:flex-row">

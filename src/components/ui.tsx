@@ -1,15 +1,7 @@
-import { type ReactNode, useEffect, useState } from 'react';
+import { type ReactNode, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const reveal = { initial: { opacity: 0, y: 22 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, margin: '-80px' }, transition: { duration: .65 } };
-
-export function Countdown() {
-  const target = new Date('2026-09-12T09:00:00+05:30').getTime();
-  const [left, setLeft] = useState(target - Date.now());
-  useEffect(() => { const id = setInterval(() => setLeft(Math.max(0, target - Date.now())), 1000); return () => clearInterval(id); }, [target]);
-  const values = [Math.floor(left / 86400000), Math.floor(left / 3600000) % 24, Math.floor(left / 60000) % 60, Math.floor(left / 1000) % 60];
-  return <div className="mb-9 grid grid-cols-4 gap-2 sm:gap-4">{values.map((value, index) => <div key={index}><p className="font-display text-3xl italic sm:text-5xl">{String(value).padStart(2, '0')}</p><p className="text-[9px] uppercase tracking-[.16em] text-muted">{['Days', 'Hours', 'Mins', 'Secs'][index]}</p></div>)}</div>;
-}
 
 export function SectionTitle({ label, title, text }: { label: string; title: ReactNode; text?: string }) { return <motion.div {...reveal} className="mb-10"><p className="mb-4 flex items-center gap-3 text-xs uppercase tracking-[.28em] text-muted"><i className="h-px w-8 bg-stroke" />{label}</p><h2 className="mb-4 text-4xl tracking-tight md:text-6xl">{title}</h2>{text && <p className="max-w-2xl text-sm leading-relaxed text-muted md:text-base">{text}</p>}</motion.div>; }
 

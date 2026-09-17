@@ -1,8 +1,11 @@
 # Sponsor logos
 
-Place the confirmed transparent PNG logos in this folder with these exact names:
+The website currently uses these confirmed logo files:
 
+- `cad-center.png`
+- `christ-college-of-engineering.png`
 - `ieee-ia-ie-pels.png`
-- `cce-ieee-sb.png`
-
-The website uses these files at `/sponsors/…` and automatically displays them in grayscale, returning to full color on hover.
+- `ieee-kerala-section.png`
+- `ieee-ras-kerala-section.png`
+- `ieee-young-professionals-horizontal.png`
+- `srishti-robotics.png`
